@@ -18,13 +18,13 @@ void numGame() {
     int attempts = 0;
 
     if (difficulty == 1) {
-        attempts = 10;  
+        attempts = 10;  // If difficulty is 1, 10 attempts allowed
 } 
     else if (difficulty == 2) {
-        attempts = 5;   
+        attempts = 5;   // If difficulty is 2, only 5 attempts allowed
 } 
     else if (difficulty == 3) {
-        attempts = 3;   
+        attempts = 3;   // If difficulty is 3, only 3 attempts are allowed
 } 
     else {
         cout << "Invalid difficulty level, try again." << endl; // If they input a number that is higher than 3, or lower than 0, retries from the beginning
@@ -36,15 +36,17 @@ void numGame() {
     cout << "Guess a number between 1 - 100: " << endl;
 
     for (int i = 0; i < attempts; i++) {
-        cout << "Attempt " << i + 1 << ": ";
+        cout << "Attempt " << i + 1 << ": "; // Takes away the attempts from which number they chose and places it here
         cin >> guess;
 
         if (guess == randNum) {
             cout << "Congratulations, you guessed the correct number!" << endl;
             return;
-        } else if (guess < randNum) {
+        } 
+        else if (guess < randNum) {
             cout << "Too low, try again." << endl;
-        } else {
+        } 
+        else {
             cout << "Too high, try again." << endl;
         }
     }
