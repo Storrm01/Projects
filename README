@@ -1,0 +1,1 @@
+I tried to create a random number guessing game that will always have a different seed everytime it is opened. The number range is from 1-100.
